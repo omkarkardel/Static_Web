@@ -1,0 +1,20 @@
+/* About page */
+.section ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+.section li {
+  margin: 6px 0;
+}
+.stat {
+  background: #fff;
+  border: 1px dashed #eaeef4;
+  border-radius: 12px;
+  padding: 14px;
+}
+.stat .num {
+  color: var(--brand-red);
+}
+.grid-3 .card p {
+  color: var(--muted);
+}

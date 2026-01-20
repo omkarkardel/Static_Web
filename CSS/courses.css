@@ -1,0 +1,46 @@
+/* Courses page refinements for exam programs */
+.course h3 {
+  margin: 6px 0 6px;
+}
+.course p {
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.course .badge {
+  background: #eef7ff;
+  border-color: #d7e9ff;
+  color: #0b5cab;
+}
+.course .btn {
+  padding: 10px 14px;
+}
+.course:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+/* Courses page */
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.course h3 {
+  margin: 6px 0;
+}
+.course p {
+  color: var(--muted);
+  margin: 0;
+}
+.course .badge {
+  background: #eef7ff;
+  color: #0b5cab;
+  border-color: #c7e1ff;
+}
+.course:hover {
+  border-color: #ffd2d6;
+  box-shadow: 0 14px 34px rgba(230, 57, 70, 0.08);
+}
+#courseGrid {
+  align-items: stretch;
+}

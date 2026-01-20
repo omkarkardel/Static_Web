@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery • Dnyanada Career Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/common.css" />
+    <link rel="stylesheet" href="../CSS/gallery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="site-header" id="header">
+      <div class="container navbar">
+        <a class="brand" href="home.html">
+          <img
+            src="../assets/logo.jpg"
+            onerror="
+              this.onerror = null;
+              this.src = '../assets/logo-placeholder.svg';
+            "
+            alt="logo"
+          />
+          <div>
+            <div class="name">ज्ञानदा करिअर ॲकॅडमी</div>
+            <div class="tag">Sinnar</div>
+          </div>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="courses.html">Courses</a>
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-top: 38px">
+        <div class="container">
+          <span class="badge">Campus Life</span>
+          <h1 class="section-title">Moments from Our Academy</h1>
+          <p class="section-sub">
+            Events, achievements and everyday learning at Dnyanada.
+          </p>
+          <div class="gallery-grid" id="gallery">
+            <img
+              src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop"
+              alt="Classroom"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"
+              alt="Seminar"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop"
+              alt="Study"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=1200&auto=format&fit=crop"
+              alt="Awards"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1503676382389-4809596d5290?q=80&w=1200&auto=format&fit=crop"
+              alt="Library"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=1200&auto=format&fit=crop"
+              alt="Team"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/logo.png" alt="logo" />
+            <div>
+              <strong>Dnyanada Career Academy</strong>
+              <div style="color: #93a1b5">Sinnar • Since 2015</div>
+            </div>
+          </div>
+          <div>
+            <strong>Academy</strong>
+            <ul class="footer-list" style="margin-top: 10px">
+              <li><a href="about.html">About</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <strong>Contact</strong>
+            <ul class="footer-list" style="margin-top: 10px">
+              <li>+91 00000 00000</li>
+              <li>info@dnyanadaacademy.com</li>
+              <li>Sinnar, Maharashtra</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-btm">
+          <span>© <span id="year"></span> Dnyanada Career Academy</span>
+          <div class="socials">
+            <a aria-label="Facebook" href="#"
+              ><i class="fa-brands fa-facebook-f"></i></a
+            ><a aria-label="Instagram" href="#"
+              ><i class="fa-brands fa-instagram"></i></a
+            ><a aria-label="YouTube" href="#"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
