@@ -12,50 +12,38 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	const header = document.getElementById('header');
-	const onScroll = () => {
-		if (!header) return;
-		if (window.scrollY > 8) header.classList.add('scrolled');
-		else header.classList.remove('scrolled');
-	};
-	onScroll();
-	window.addEventListener('scroll', onScroll, { passive: true });
 
-		const counts = document.querySelectorAll('.count');
-		if (counts.length) {
-			const format = new Intl.NumberFormat('en-IN');
-			const animate = (el) => {
-				if (el.dataset.animated === 'true') return;
-				const target = parseFloat(el.dataset.target || '0');
-				const suffix = el.dataset.suffix || '';
-				const duration = parseInt(el.dataset.duration || '1200', 10);
-				let startTime = null;
-				const step = (ts) => {
-					if (!startTime) startTime = ts;
-					const p = Math.min((ts - startTime) / duration, 1);
-					const current = Math.floor(p * target);
-					el.textContent = format.format(current) + suffix;
-					if (p < 1) requestAnimationFrame(step);
-					else el.dataset.animated = 'true';
-				};
-				requestAnimationFrame(step);
-			};
+  // Convert English number to Marathi digits
+  function toMarathiNumber(num) {
+    const marathiDigits = ['०','१','२','३','४','५','६','७','८','९'];
+    return num.toString().replace(/\d/g, d => marathiDigits[d]);
+  }
 
-			const grid = document.querySelector('.stats-grid');
-			if ('IntersectionObserver' in window && grid) {
-				const io = new IntersectionObserver((entries, obs) => {
-					entries.forEach(e => {
-						if (e.isIntersecting) {
-							counts.forEach(animate);
-							obs.disconnect();
-						}
-					});
-				}, { threshold: 0.3 });
-				io.observe(grid);
-			} else {
-				counts.forEach(animate);
-			}
-		}
+  const counters = document.querySelectorAll(".count");
+
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || "";
+    let current = 0;
+
+    const increment = target / 100; // speed control
+
+    const updateCounter = () => {
+      if (current < target) {
+        current += increment;
+        counter.innerText =
+          toMarathiNumber(Math.floor(current)) + suffix;
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText =
+          toMarathiNumber(target) + suffix;
+      }
+    };
+
+    updateCounter();
+  });
+
+
 
 	// Auto-build and loop the red tape (ticker)
 	const buildTape = () => {

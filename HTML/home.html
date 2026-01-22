@@ -1,213 +1,235 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dnyanada Career Academy, Sinnar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../CSS/common.css" />
-    <link rel="stylesheet" href="../CSS/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Xx+uP6rJ2E7r0D4aG2t+fXz0z7Tg9M1uT3pC5t6p1j8l8dR3w1X5h+uYtKQ3dYg2Yf7S+fQ8xW2pQeF9mYw8xg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="site-header" id="header">
-      <div class="container navbar">
-        <a class="brand" href="home.html">
-          <img
-            src="../assets/logo.jpg"
-            onerror="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ज्ञानदा करिअर ॲकॅडमी | Dnyanada Career Academy, Sinnar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Xx+uP6rJ2E7r0D4aG2t+fXz0z7Tg9M1uT3pC5t6p1j8l8dR3w1X5h+uYtKQ3dYg2Yf7S+fQ8xW2pQeF9mYw8xg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <a class="brand" href="home.html">
+        <img src="../assets/logo.png" onerror="
               this.onerror = null;
               this.src = '../assets/logo-placeholder.svg';
-            "
-            alt="Dnyanada Career Academy logo"
-          />
-          <div>
-            <div class="name">ज्ञानदा करिअर ॲकॅडमी</div>
-          </div>
-        </a>
-        <nav class="nav-links" id="navLinks">
-          <a href="home.html" class="active">Home</a>
-          <a href="about.html">About</a>
-          <a href="courses.html">Courses</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-        </button>
-      </div>
-    </header>
+            " alt="Dnyanada Career Academy logo" />
+        <div>
+          <div class="name">ज्ञानदा करिअर ॲकॅडमी</div>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero hero--bgvideo">
-        <div class="hero-bg" aria-hidden="true">
-          <video autoplay muted loop playsinline>
-            <source src="../assets/intro.webm" type="video/webm" />
-            <!-- <source src="../assets/intro.mp4" type="video/mp4"> -->
-          </video>
-          <div class="hero-overlay">
-            <div class="hero-content">
-              <h3 style="color: white; text-align: center">
-                "हजारोंच्या गर्दीत तुम्ही मला निवडलं, लक्षात ठेवा—करोडोंच्या
-                गर्दीतही मी तुम्हाला हरवू देणार नाही!"
-              </h3>
+  <main>
+    <section class="hero hero--bgvideo">
+      <div class="hero-bg" aria-hidden="true">
+        <video autoplay muted loop playsinline>
+          <source src="../assets/intro.webm" type="video/webm" />
+          <!-- <source src="../assets/intro.mp4" type="video/mp4"> -->
+        </video>
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h3 class="hero-text">
+              "हजारोंच्या गर्दीत तुम्ही मला निवडलं, लक्षात ठेवा—करोडोंच्या
+              गर्दीतही मी तुम्हाला हरवू देणार नाही!"
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scrolling tape directly below the video -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape-track" data-auto>
+        <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-art">
+        <div class="stats-wrapper">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="num count" data-target="2000" data-suffix="+">०</span>
+              <span class="label">एकूण विद्यार्थी</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Scrolling tape directly below the video -->
-      <div class="tape" aria-hidden="true">
-        <div class="tape-track" data-auto>
-          <span class="tape-item">Success 100% Guarantee</span>
-        </div>
-      </div>
-
-      <div class="container hero-inner">
-        <div class="hero-art">
-          <div class="stats-wrapper">
-            <div class="stats-grid">
-              <div class="stat-card">
-                <span class="num count" data-target="1000" data-suffix="+"
-                  >0</span
-                >
-                <span class="label">Students taught</span>
-              </div>
-
-              <div class="stat-card">
-                <span class="num count" data-target="10" data-suffix="+"
-                  >0</span
-                >
-                <span class="label">Years of trust</span>
-              </div>
-
-              <div class="stat-card">
-                <span class="num count" data-target="95" data-suffix="%"
-                  >0</span
-                >
-                <span class="label">Success Student</span>
-              </div>
+            <div class="stat-card">
+              <span class="num count" data-target="7" data-suffix="+">०</span>
+              <span class="label">यशस्वी प्रवासाची वर्षे</span>
+            </div>
+            <div class="stat-card">
+              <span class="num count" data-target="250" data-suffix="+">०</span>
+              <span class="label">यशस्वी विद्यार्थी</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">आमच्याबद्दल</h2>
-          <p class="section-sub">
-            Consistent results, experienced mentors, and doubt-solving that
-            keeps you ahead.
+    <!-- Paragraph  -->
+    <section class="about-section">
+      <div class="about-container">
+        <h2 class="section-title">आमच्या बद्दल...</h2>
+        <div class="about-content">
+          <p>
+            शिस्त, परिश्रम आणि योग्य मार्गदर्शनातून पोलिस बनवणारी अकॅडमी. विषयानुसार अभ्यासाचे वेळापत्रक, नियमित चाचण्या
+            आणि वैयक्तिक अभिप्रायाद्वारे विद्यार्थ्यांची सातत्यपूर्ण प्रगती सुनिश्चित केली जाते.
           </p>
-          <div class="grid grid-3">
-            <div class="card">
-              <h3>Expert Faculty</h3>
-              <p>
-                Teachers with proven track records in competitive and board exam
-                preparation.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Structured Learning</h3>
-              <p>
-                Topic-wise schedules, regular tests, and personalized feedback
-                for steady progress.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Student-Centric</h3>
-              <p>
-                Small batches, mentoring, and focused attention on individual
-                strengths.
-              </p>
-            </div>
-          </div>
+          <p>
+            स्पर्धा व बोर्ड परीक्षांसाठी अनुभवसंपन्न शिक्षक प्रभावी मार्गदर्शन प्रदान करतात. लहान गट, वैयक्तिक लक्ष, आणि
+            योग्य प्रशिक्षणाद्वारे प्रत्येक विद्यार्थ्याच्या क्षमतांचा पूर्ण विकास साधला जातो.
+          </p>
         </div>
-      </section>
-      <section class="section" style="background: #fff">
-        <div class="container">
-          <div class="grid grid-2" style="align-items: center">
-            <div>
-              <h2 class="section-title">Admissions Open</h2>
-              <p class="section-sub">
-                Enroll for MPSC, PSI/Police, STI and Group B/C batches. Limited
-                seats.
-              </p>
-              <a class="btn primary" href="contact.html">Get Counseling</a>
-            </div>
-            <div class="card">
-              <h3>Popular Programs</h3>
-              <ul>
-                <li>MPSC State Services (Pre/Mains/Interview)</li>
-                <li>PSI/Police (with Physical guidance)</li>
-                <li>STI and ASO / Group B-C</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-top">
-          <div>
-            <div class="footer-brand">
-              <img src="../assets/logo.png" alt="Academy logo" />
-              <div>
-                <strong>Dnyanada Career Academy</strong>
-                <div style="color: #93a1b5">Sinnar • Since 2015</div>
-              </div>
-            </div>
-            <p style="max-width: 520px; color: #c9d3e6; margin-top: 10px">
-              We help students build solid concepts and confidence with a
-              balanced approach to theory, practice and testing.
-            </p>
-          </div>
-          <div>
-            <strong>Academy</strong>
-            <ul class="footer-list" style="margin-top: 10px">
-              <li><a href="about.html">About</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <strong>Contact</strong>
-            <ul class="footer-list" style="margin-top: 10px">
-              <li>+91 00000 00000</li>
-              <li>info@dnyanadaacademy.com</li>
-              <li>Sinnar, Maharashtra</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-btm">
-          <span>© <span id="year"></span> Dnyanada Career Academy</span>
-          <div class="socials">
-            <a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a aria-label="YouTube" href="#"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+        <div>
+          <a class="btn primary" href="about.html">अधिक माहिती</a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="../script.js"></script>
-  </body>
+    <!-- Courses section -->
+    <section class="section" style="background:#fff">
+      <div class="container">
+
+        <h2 class="section-title">आमचे कोर्सेस</h2>
+        <p class="section-sub">
+          MPSC, PSI, पोलीस, STI आणि तालाठीसाठी अनुभवी मार्गदर्शन.
+        </p>
+
+
+
+        <!-- Courses Cards -->
+        <div class="courses-row">
+
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="course-name">Police Bharti</div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="course-name">MPSC</div>
+          </div>
+
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="course-name">Talathi</div>
+          </div>
+
+        </div>
+
+        <!-- Courses Page Button -->
+        <a href="courses.html" class="btn primary">
+          सर्व कोर्सेस पहा
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section class="section" style="background:#f8f8f8">
+      <div class="container">
+
+        <h2 class="section-title text-center">Gallery</h2>
+        <p class="section-sub text-center">
+          आमच्या प्रशिक्षणातील काही खास क्षण
+        </p>
+
+        <!-- Gallery Preview -->
+        <div class="grid grid-3 gallery-preview">
+          <img src="assets/NCA1.jpeg" alt="Class Photo">
+          <img src="assets/NCA2.jpeg" alt="Students">
+          <img src="assets/NCA3.jpeg" alt="Guidance Session">
+        </div>
+
+        <!-- Gallery Page Button -->
+        <div class="text-center" style="margin-top:20px">
+          <a href="gallery.html" class="btn primary">
+            संपूर्ण गॅलरी पहा
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="../assets/logo.png" alt="Academy logo" />
+            <div>
+              <strong>ज्ञानदा करिअर ॲकॅडमी</strong>
+              <div style="color: #93a1b5">Sinnar • Since 2018</div>
+            </div>
+          </div>
+          <p style="max-width: 520px; color: #c9d3e6; margin-top: 10px">
+            We help students build solid concepts and confidence with a
+            balanced approach to theory, practice and testing.
+          </p>
+        </div>
+        <div>
+          <strong>Academy</strong>
+          <ul class="footer-list" style="margin-top: 10px">
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <ul class="footer-list" style="margin-top: 10px">
+            <li>+91 00000 00000</li>
+            <li>info@dnyanadaacademy.com</li>
+            <li>Sinnar, Maharashtra</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-btm">
+        <span>© <span id="year"></span> Dnyanada Career Academy</span>
+        <div class="socials">
+          <a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a aria-label="YouTube" href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
 </html>
