@@ -83,3 +83,31 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+// js for img gallery popup
+const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("modal-img");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".img-modal .close");
+
+  // Select all gallery images
+  const galleryImages = document.querySelectorAll(".gallery-preview img");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";       // Show modal
+      modalImg.src = img.src;              // Full-size image
+      captionText.textContent = img.alt;   // Caption from alt
+    });
+  });
+
+  // Close modal on clicking ×
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside image
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }

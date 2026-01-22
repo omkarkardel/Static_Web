@@ -5,9 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ज्ञानदा करिअर ॲकॅडमी | Dnyanada Career Academy, Sinnar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="../CSS/common.css" />
   <link rel="stylesheet" href="../CSS/home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -62,10 +64,15 @@
 
     <!-- Scrolling tape directly below the video -->
     <div class="tape" aria-hidden="true">
-      <div class="tape-track" data-auto>
+      <div class="tape-track">
+        <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
+        <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
+        <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
+        <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
         <span class="tape-item">विद्यार्थ्याच्या यशाची १००% हमी</span>
       </div>
     </div>
+
 
     <div class="container hero-inner">
       <div class="hero-art">
@@ -126,28 +133,31 @@
             <div class="course-icon">
               <i class="fas fa-shield-alt"></i>
             </div>
-            <div class="course-name">Police Bharti</div>
+            <h4 class="course-name">पोलीस भरती</h4>
+            <p class="course-desc">पोलीस भरतीसाठी संपूर्ण मार्गदर्शन</p>
           </div>
 
           <div class="course-card">
             <div class="course-icon">
               <i class="fas fa-university"></i>
             </div>
-            <div class="course-name">MPSC</div>
+            <h4 class="course-name">MPSC</h4>
+            <p class="course-desc">राज्य सेवा परीक्षेची तयारी</p>
           </div>
 
           <div class="course-card">
             <div class="course-icon">
               <i class="fas fa-file-alt"></i>
             </div>
-            <div class="course-name">Talathi</div>
+            <h4 class="course-name">तालाठी</h4>
+            <p class="course-desc">तालाठी भरतीसाठी विशेष प्रशिक्षण</p>
           </div>
-
         </div>
+
 
         <!-- Courses Page Button -->
         <a href="courses.html" class="btn primary">
-          सर्व कोर्सेस पहा
+          उपलब्ध कोर्सेस
         </a>
 
       </div>
@@ -164,10 +174,18 @@
         </p>
 
         <!-- Gallery Preview -->
+        <!-- Gallery Images -->
         <div class="grid grid-3 gallery-preview">
-          <img src="assets/NCA1.jpeg" alt="Class Photo">
-          <img src="assets/NCA2.jpeg" alt="Students">
-          <img src="assets/NCA3.jpeg" alt="Guidance Session">
+          <img src="../assets/NCA1.jpeg" alt="Class Photo">
+          <img src="../assets/NCA2.jpeg" alt="Students">
+          <img src="../assets/NCA3.jpeg" alt="Guidance Session">
+        </div>
+
+        <!-- Modal for full-size popup -->
+        <div id="img-modal" class="img-modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal-img">
+          <div id="caption"></div>
         </div>
 
         <!-- Gallery Page Button -->
@@ -196,8 +214,8 @@
             </div>
           </div>
           <p style="max-width: 520px; color: #c9d3e6; margin-top: 10px">
-            We help students build solid concepts and confidence with a
-            balanced approach to theory, practice and testing.
+            अनुभवी मार्गदर्शन आणि शिस्तबद्ध अभ्यासातून
+            विद्यार्थ्यांच्या यशाला आम्ही ठोस दिशा देतो.
           </p>
         </div>
         <div>
@@ -212,14 +230,14 @@
         <div>
           <strong>Contact</strong>
           <ul class="footer-list" style="margin-top: 10px">
-            <li>+91 00000 00000</li>
+            <li> +919527425002 / +919527065002 </li>
             <li>info@dnyanadaacademy.com</li>
             <li>Sinnar, Maharashtra</li>
           </ul>
         </div>
       </div>
       <div class="footer-btm">
-        <span>© <span id="year"></span> Dnyanada Career Academy</span>
+        <span>© <span id="year"></span> ज्ञानदा करिअर ॲकॅडमी</span>
         <div class="socials">
           <a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
