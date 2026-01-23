@@ -111,3 +111,54 @@ const modal = document.getElementById("img-modal");
       modal.style.display = "none";
     }
   }
+
+  // About page Leader cards img 
+ function toggleProfile() {
+    const profile = document.getElementById("profileContent");
+    profile.style.display =
+      profile.style.display === "block" ? "none" : "block";
+  }
+
+
+//   js in about page for the last card
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".count");
+  let started = false;
+
+  const startCount = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const suffix = counter.getAttribute("data-suffix") || "";
+      let current = 0;
+      const increment = Math.ceil(target / 100);
+
+      const updateCount = () => {
+        current += increment;
+        if (current < target) {
+          counter.innerText = current + suffix;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          startCount();
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  document
+    .querySelectorAll(".stats-grid")
+    .forEach(section => observer.observe(section));
+});

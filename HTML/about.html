@@ -1,131 +1,170 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About • ज्ञानदा करिअर ॲकॅडमी</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../CSS/common.css" />
-    <link rel="stylesheet" href="../CSS/about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="site-header" id="header">
-      <div class="container navbar">
-        <a class="brand" href="home.html">
-          <img
-            src="../assets/logo.jpg"
-            onerror="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ज्ञानदा करिअर ॲकॅडमी | Dnyanada Career Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="site-header" id="header">
+    <div class="container navbar">
+      <a class="brand" href="home.html">
+        <img src="../assets/logo.png" onerror="
               this.onerror = null;
               this.src = '../assets/logo-placeholder.svg';
-            "
-            alt="Dnyanada Career Academy logo"
-          />
-          <div>
-            <div class="name">ज्ञानदा करिअर ॲकॅडमी</div>
-            <div class="tag"></div>
-          </div>
-        </a>
-        <nav class="nav-links" id="navLinks">
-          <a href="home.html">Home</a>
-          <a href="about.html" class="active">About</a>
-          <a href="courses.html">Courses</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-        </button>
-      </div>
-    </header>
+            " alt="Dnyanada Career Academy logo" />
+        <div>
+          <div class="name">ज्ञानदा करिअर ॲकॅडमी</div>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-    <main>
-      <section class="section" style="padding-top: 38px">
-        <div class="container">
-          <span class="badge">Our Success Story</span>
-          <h1 class="section-title">About Dnyanada Career Academy</h1>
-          <p class="section-sub">
-            We specialize in Police recruitment and state services — MPSC,
-            PSI/Police, STI, and allied Group B/C exams — with result‑driven
-            teaching and mentoring.
+  <main>
+
+    <!-- section 1 -->
+    <section class="about-hero">
+      <div class="about-overlay">
+        <div class="container about-content">
+          <h1 class="section-title">संस्थेची ओळख व उद्दिष्टे</h1>
+        </div>
+      </div>
+    </section>
+
+    <!--img cards in sir -->
+    <section class="leader-section" style="padding: 40px 0 0">
+      <div class="leader-wrapper">
+
+        <!-- LEFT PROFILE CARD -->
+        <div class="leader-card">
+          <img src="../assets/profile1.jpg" alt="Director" class="leader-img" onclick="toggleProfile()">
+
+          <!-- Profile content (HIDDEN by default) -->
+          <div class="profile-content" id="profileContent">
+            <h3>संचालक – (सर)</h3>
+            <p>संस्थापक व मुख्य मार्गदर्शक</p>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT (VISIBLE BY DEFAULT) -->
+        <div class="leader-info">
+          <h2>आमचे मार्गदर्शक व संस्थापक</h2>
+          <p>
+            संस्थेचे संस्थापक व मार्गदर्शक असून,
+            त्यांच्या दूरदृष्टी, शिस्तबद्ध मार्गदर्शन
+            व अनुभवामुळे शेकडो विद्यार्थ्यांचे
+            पोलीस व राज्यसेवा परीक्षांमधील स्वप्न
+            साकार झाले आहे.
           </p>
 
-          <div class="grid grid-2" style="align-items: start">
-            <div class="card">
-              <h3>Our Philosophy</h3>
-              <p>
-                We believe consistent practice, timely feedback and mentorship
-                create long-term success. Our programs blend syllabus mastery,
-                PYQ analysis and regular tests for real exam performance.
-              </p>
-              <ul>
-                <li>Concept-first teaching with real examples</li>
-                <li>Weekly tests and detailed analysis</li>
-                <li>Dedicated doubt-solving sessions</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Highlights</h3>
-              <div class="grid grid-2">
-                <div class="stat">
-                  <span class="num">50+</span><span>Rank holders</span>
-                </div>
-                <div class="stat">
-                  <span class="num">1000+</span><span>Parent reviews</span>
-                </div>
-                <div class="stat">
-                  <span class="num">15+</span><span>Expert mentors</span>
-                </div>
-                <div class="stat">
-                  <span class="num">30+</span><span>Batches yearly</span>
-                </div>
-              </div>
-            </div>
+          <p>
+            MPSC, PSI/पोलीस, STI तसेच गट B/C
+            परीक्षांसाठी परिणामाभिमुख अध्यापन
+            हीच आमची ओळख आहे.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Section2 Awards -->
+    <section class="achievements-section" style="padding: 50px 0 0">
+      <div class="container">
+
+        <!-- Heading -->
+        <h2 class="section-title center">आमची यशस्वी कामगिरी व पुरस्कार</h2>
+        <p class="section-sub center">
+          सातत्यपूर्ण परिश्रम, योग्य मार्गदर्शन आणि शिस्त यामुळे मिळालेली
+          आमची उल्लेखनीय कामगिरी
+        </p>
+
+        <!-- Awards Cards -->
+        <div class="awards-grid">
+          <div class="award-card">
+            <span class="award-num">५०+</span>
+            <h4>रँक होल्डर्स</h4>
+            <p>राज्य व जिल्हास्तरीय परीक्षांमध्ये उज्वल यश</p>
           </div>
 
-          <div class="section" style="padding: 38px 0 0">
-            <h2 class="section-title">Values</h2>
-            <div class="grid grid-3">
-              <div class="card">
-                <h3>Integrity</h3>
-                <p>
-                  Honest guidance and transparent communication with students
-                  and parents.
-                </p>
+          <div class="award-card">
+            <span class="award-num">१०००+</span>
+            <h4>पालकांचे विश्वास</h4>
+            <p>पालकांकडून सकारात्मक अभिप्राय</p>
+          </div>
+
+          <div class="award-card">
+            <span class="award-num">१५+</span>
+            <h4>तज्ज्ञ मार्गदर्शक</h4>
+            <p>अनुभवी शिक्षक व मेंटॉर्स</p>
+          </div>
+
+          <div class="award-card">
+            <span class="award-num">३०+</span>
+            <h4>बॅचेस दरवर्षी</h4>
+            <p>नियमित व संरचित प्रशिक्षण बॅचेस</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section3 - Our Values -->
+    <section style="padding: 50px 0 0">
+
+      <!-- Heading -->
+      <div class="section-heading">
+        <h2 class="section-title center">आमची मूल्ये</h2>
+        <p class="section-sub center">
+          शिस्त, गुणवत्ता आणि सातत्य या मूल्यांवर आधारित आमचा शिक्षणप्रवास
+        </p>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-art">
+          <div class="stats-wrapper">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="num count" data-target="2000" data-suffix="+">०</span>
+                <span class="label">एकूण विद्यार्थी</span>
               </div>
-              <div class="card">
-                <h3>Excellence</h3>
-                <p>
-                  High-quality content and disciplined practice for strong
-                  outcomes.
-                </p>
+
+              <div class="stat-card">
+                <span class="num count" data-target="7" data-suffix="+">०</span>
+                <span class="label">यशस्वी प्रवासाची वर्षे</span>
               </div>
-              <div class="card">
-                <h3>Care</h3>
-                <p>
-                  Personal attention and mentorship that nurtures confidence.
-                </p>
+
+              <div class="stat-card">
+                <span class="num count" data-target="250" data-suffix="+">०</span>
+                <span class="label">यशस्वी विद्यार्थी</span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
 
+      </div>
+    </section>
+
+
+    <!-- Footer  -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-top">
@@ -157,18 +196,15 @@
         <div class="footer-btm">
           <span>© <span id="year"></span> Dnyanada Career Academy</span>
           <div class="socials">
-            <a aria-label="Facebook" href="#"
-              ><i class="fa-brands fa-facebook-f"></i></a
-            ><a aria-label="Instagram" href="#"
-              ><i class="fa-brands fa-instagram"></i></a
-            ><a aria-label="YouTube" href="#"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
+            <a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram"
+              href="#"><i class="fa-brands fa-instagram"></i></a><a aria-label="YouTube" href="#"><i
+                class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="../script.js"></script>
-  </body>
+</body>
+
 </html>
