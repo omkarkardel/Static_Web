@@ -30,7 +30,9 @@
   background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
-  align-items: center;
+}
+.section-title{
+  text-align: center;
 }
 
 
