@@ -162,3 +162,4 @@ const modal = document.getElementById("img-modal");
     .querySelectorAll(".stats-grid")
     .forEach(section => observer.observe(section));
 });
+
