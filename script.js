@@ -112,7 +112,40 @@ const modal = document.getElementById("img-modal");
     }
   }
 
-  // About page Leader cards img 
+// js for scroll images right to left
+
+const gallery = document.querySelector(".gallery-preview");
+
+// Clone images for seamless loop
+const images = [...gallery.children];
+images.forEach(img => {
+  const clone = img.cloneNode(true);
+  gallery.appendChild(clone);
+});
+
+let scrollInterval = null;
+const speed = 0.7; // change speed (0.5 slow | 1 normal | 2 fast)
+
+gallery.addEventListener("mouseenter", () => {
+  if (scrollInterval) return;
+
+  scrollInterval = setInterval(() => {
+    gallery.scrollLeft += speed;
+
+    // Seamless reset (no visible jump)
+    if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+      gallery.scrollLeft = 0;
+    }
+  }, 20);
+});
+
+gallery.addEventListener("mouseleave", () => {
+  clearInterval(scrollInterval);
+  scrollInterval = null;
+});
+
+
+// About page Leader cards img 
  function toggleProfile() {
     const profile = document.getElementById("profileContent");
     profile.style.display =
@@ -123,6 +156,9 @@ const modal = document.getElementById("img-modal");
 //   js in about page for the last card
 
   document.addEventListener("DOMContentLoaded", () => {
+  /* =======================
+     COUNTER LOGIC (UNCHANGED)
+  ======================== */
   const counters = document.querySelectorAll(".count");
   let started = false;
 
@@ -161,5 +197,45 @@ const modal = document.getElementById("img-modal");
   document
     .querySelectorAll(".stats-grid")
     .forEach(section => observer.observe(section));
+
+  /* =======================
+     GALLERY BUTTON LOGIC
+  ======================== */
+  const gallery = document.querySelector(".gallery-preview");
+  const btnLeft = document.querySelector(".gallery-btn.left");
+  const btnRight = document.querySelector(".gallery-btn.right");
+
+  if (gallery && btnLeft && btnRight) {
+    // Clone images once for infinite scroll
+    [...gallery.children].forEach(img => {
+      gallery.appendChild(img.cloneNode(true));
+    });
+
+    const scrollAmount = 240;
+
+    btnRight.addEventListener("click", () => {
+      gallery.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+
+      // seamless loop
+      if (gallery.scrollLeft >= gallery.scrollWidth / 2) {
+        gallery.scrollLeft = 0;
+      }
+    });
+
+    btnLeft.addEventListener("click", () => {
+      gallery.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+      });
+
+      if (gallery.scrollLeft <= 0) {
+        gallery.scrollLeft = gallery.scrollWidth / 2;
+      }
+    });
+  }
 });
+
 

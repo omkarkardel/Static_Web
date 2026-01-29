@@ -463,3 +463,283 @@
 }
 
 /* Animations */
+/* =====================
+   Smooth Reveal Animation
+===================== */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease;
+}
+
+/* =====================
+   Header Scroll Effect
+===================== */
+.site-header.scrolled {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   Hero Text Polish
+===================== */
+.hero-text {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* =====================
+   Stats Cards Premium Feel
+===================== */
+.stat-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* =====================
+   Course Cards Clean Hover
+===================== */
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+/* =====================
+   Mobile Optimization
+===================== */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 20px;
+  }
+}
+
+ /* Css for images scroll in gallery */
+
+.gallery-preview {
+  display: flex !important;   /* override grid */
+  flex-wrap: nowrap;
+  gap: 20px;
+
+  overflow-x: auto;           /* MUST be auto, not hidden */
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch; /* iOS smooth */
+  scrollbar-width: none;      /* Firefox */
+}
+
+.gallery-preview::-webkit-scrollbar {
+  display: none;              /* Chrome / Safari */
+}
+
+.gallery-preview img {
+  flex: 0 0 auto;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/*Mobile: ONE card + swipe */
+@media (max-width: 768px) {
+  .gallery-preview {
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    touch-action: pan-x;      /*  allow horizontal swipe */
+  }
+
+  .gallery-preview img {
+    min-width: 100%;          /* ONE card visible */
+    height: 220px;
+    scroll-snap-align: center;
+  }
+}
+
+
+/* Buttons on home page gallery */
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.gallery-btn.left {
+  left: -10px;
+}
+
+.gallery-btn.right {
+  right: -10px;
+}
+
+.gallery-btn:hover {
+  background: #000;
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* mobile touch-friendly */
+@media (max-width: 768px) {
+  .gallery-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+/* Testimonials section CSS */
+
+.testimonial-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: testimonial-scroll 20s linear infinite;
+}
+
+/* CARD */
+.testimonial-card {
+  min-width: 320px;
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    /* background 0.35s ease; */
+}
+
+/* PREMIUM HOVER */
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  box-shadow: 0 25px 60px rgba(79, 70, 229, 0.4);
+}
+
+/* TEXT COLOR FIX */
+.testimonial-card:hover * {
+  color: #fff;
+}
+
+/* infinite animation */
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* pause on hover (premium touch) */
+.testimonial-wrapper:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 260px;
+  }
+}
+
+
+/* WhatsApp Floating Button */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  animation: whatsapp-pulse 1.8s infinite;
+  transition: transform 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Pulse effect */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
+
+/* Gallery Dots */
+/* Gallery dots */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.gallery-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-dots span.active {
+  background: #2563eb;
+  transform: scale(1.3);
+}
+
+
